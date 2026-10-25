@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mitti Studio | Pottery classes for beginners</title>
+    <meta name="description" content="Small-group pottery classes for beginners.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header and navigation -->
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="logo" href="#top" aria-label="Mitti Studio home">
+                Mitti Studio
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+            >
+                <span class="nav-toggle__label">Menu</span>
+                <span class="nav-toggle__bars" aria-hidden="true"></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul class="nav-list">
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#process">How it works</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                    <li>
+                        <button class="btn btn--small book-class" type="button">
+                            Book a class
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <!-- Hero section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1 id="hero-title">Make a bowl you will actually use.</h1>
+
+                    <p class="lead">
+                        Four weeks, six students per class, and every piece you shape
+                        goes home glazed and food-safe. No experience needed.
+                    </p>
+
+                    <div class="hero-actions">
+                        <button class="btn book-class" type="button">
+                            Reserve your spot
+                        </button>
+                        <a class="text-link" href="#process">
+                            See how a class works
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <svg viewBox="0 0 400 320" focusable="false">
+                        <ellipse cx="200" cy="292" rx="180" ry="14"
+                            class="svg-shadow" />
+                        <path class="pot pot--tall"
+                            d="M150 292 C120 250 120 150 160 96 L160 70 H240 V96 C280 150 280 250 250 292 Z" />
+                        <path class="pot pot--bowl"
+                            d="M20 292 C10 250 40 215 85 215 C130 215 160 250 150 292 Z" />
+                        <path class="pot pot--cup"
+                            d="M270 292 L262 220 H350 L342 292 Z" />
+                        <path class="pot-band"
+                            d="M128 190 C170 205 230 205 272 190" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Class features -->
+        <section class="features" id="classes" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title">What you get in every class</h2>
+
+                <ul class="feature-grid">
+                    <li class="feature">
+                        <h3>Small groups</h3>
+                        <p>
+                            Six students per teacher, so you get hands-on help
+                            at the wheel instead of watching from the back.
+                        </p>
+                    </li>
+
+                    <li class="feature">
+                        <h3>Everything included</h3>
+                        <p>
+                            Clay, tools, aprons, firing and glazing are covered
+                            in your fee. Bring clothes you don't mind getting dirty.
+                        </p>
+                    </li>
+
+                    <li class="feature">
+                        <h3>Pieces you keep</h3>
+                        <p>
+                            You finish four weeks with a bowl, a cup and a plate,
+                            fired and ready for the kitchen.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Four-week class process -->
+        <section class="process" id="process" aria-labelledby="process-title">
+            <div class="container process-inner">
+                <h2 id="process-title">Four weeks, start to finish</h2>
+
+                <ol class="steps">
+                    <li>
+                        <strong>Week 1: Centre the clay.</strong>
+                        Wedge, centre and pull your first cylinder.
+                    </li>
+                    <li>
+                        <strong>Week 2: Shape.</strong>
+                        Turn cylinders into bowls and cups.
+                    </li>
+                    <li>
+                        <strong>Week 3: Trim and dry.</strong>
+                        Add feet, handles and your mark.
+                    </li>
+                    <li>
+                        <strong>Week 4: Glaze.</strong>
+                        Choose colours; we fire and you collect your pieces.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Email signup -->
+        <section class="join" id="join" aria-labelledby="join-title">
+            <div class="container join-inner">
+                <div>
+                    <h2 id="join-title">Next batch starts soon</h2>
+                    <p>
+                        Leave your email and we will send the dates and a booking
+                        link. No spam, one message per batch.
+                    </p>
+                </div>
+
+                <form class="join-form" novalidate>
+                    <label for="email">Email address</label>
+
+                    <div class="join-form__row">
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="you@example.com"
+                            required
+                            aria-describedby="signup-message"
+                        >
+
+                        <button class="btn" type="submit">
+                            Send me the dates
+                        </button>
+                    </div>
+
+                    <p class="form-message" id="signup-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking modal -->
+    <dialog class="booking-modal" id="booking-modal"
+        aria-labelledby="booking-title" aria-describedby="booking-description">
+
+        <div class="modal-header">
+            <div>
+                <h2 id="booking-title">Book a pottery class</h2>
+                <p id="booking-description">
+                    Demonstration only: nothing is sent and nothing is booked. All fields are required.
+                </p>
+            </div>
+
+            <button class="modal-close" type="button" aria-label="Close booking form">
+                &times;
+            </button>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+            <label for="class-type">Choose a class</label>
+            <select id="class-type" name="classType" required
+                aria-describedby="class-type-error">
+                <option value="">Select a class</option>
+                <option value="Beginner Pottery">Beginner Pottery</option>
+                <option value="Wheel Throwing">Wheel Throwing</option>
+                <option value="Hand Building">Hand Building</option>
+            </select>
+            <p class="field-error" id="class-type-error"></p>
+
+            <label for="booking-name">Your name</label>
+            <input id="booking-name" name="name" type="text"
+                autocomplete="name" required aria-describedby="booking-name-error">
+            <p class="field-error" id="booking-name-error"></p>
+
+            <label for="booking-email">Email address</label>
+            <input id="booking-email" name="email" type="email"
+                autocomplete="email" placeholder="you@example.com" required
+                aria-describedby="booking-email-error">
+            <p class="field-error" id="booking-email-error"></p>
+
+            <label for="booking-seats">Number of seats</label>
+            <select id="booking-seats" name="seats" required
+                aria-describedby="booking-seats-error">
+                <option value="1">1 seat</option>
+                <option value="2">2 seats</option>
+                <option value="3">3 seats</option>
+                <option value="4">4 seats</option>
+                <option value="5">5 seats</option>
+                <option value="6">6 seats</option>
+            </select>
+            <p class="field-error" id="booking-seats-error"></p>
+
+            <!-- Live region: announces the validation summary and the demo success message -->
+            <p class="booking-message" id="booking-message"
+                role="status" aria-live="polite"></p>
+
+            <button class="btn booking-submit" type="submit">
+                Confirm demo booking
+            </button>
+        </form>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="visit">
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-title">Mitti Studio</p>
+                <p>Pottery classes for beginners.</p>
+            </div>
+
+            <div>
+                <p class="footer-title">Visit</p>
+                <address>
+                    12 Kiln Lane<br>
+                    Open Tue to Sun, 10am to 7pm
+                </address>
+            </div>
+
+            <div>
+                <p class="footer-title">Contact</p>
+                <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <small>
+                &copy; <span id="year">2026</span> Mitti Studio.
+                Demo project for internship Week 3.
+            </small>
+        </div>
+    </footer>
+</body>
+</html>
